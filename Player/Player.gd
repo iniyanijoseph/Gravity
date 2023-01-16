@@ -4,8 +4,9 @@ signal action_complete
 
 func _ready():
 	# Set Up Signal Bus
-	connect("action_complete", PlayerActionSignalBus, "complete_action")
+	var _a = connect("action_complete", PlayerActionSignalBus, "complete_action")
 	PlayerActionSignalBus.player = self
+	PlayerActionSignalBus.setup()
 
 func slam():
 	#Replace With Code to Slam
