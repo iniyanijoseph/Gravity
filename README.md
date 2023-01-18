@@ -1,2 +1,2 @@
 # Gravity:
-Created by Abhiram, 
+Created by Abhiram, Inyian, etc.
