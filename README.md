@@ -2,7 +2,7 @@
 Created by Abhiram, Inyian, etc.
 
 Story:
-Story:
+
 Main is a scientist in Earth1, who is researching technology which can manipulate the very fabric of space time inside of his lab.
 Main creates a rip in the fabric, and is sucked in, which takes him to Earth2 inside of a large spaceship.
 Unbeknownst to Main, he is sucked in as a result of Alternate Main, who is trying to help Earth2 invade Earth1 and use it for resources. Alternate Main was unable to figure out the method of a portal, but was able to figure out how to bring Earth1 people to Earth2, and as so brought Main to help him
