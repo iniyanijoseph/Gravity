@@ -10,15 +10,15 @@ func _ready():
 
 func slam():
 	#Replace With Code to Slam
-	pass
+	action_complete()
 
 func gravitate():
 	#Replace With Code to Gravitate to a Point
-	pass
+	action_complete()
 
 func repel():
 	#Replace With Code to Repel Enemies for a short period of Time
-	pass
+	action_complete()
 
 # Call Whenever an action is complete to update player state
 func action_complete():
