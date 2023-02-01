@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 onready var actionTriggers : VBoxContainer = $ActionTriggers
 onready var pointsBar : ProgressBar = $HBoxContainer/ProgressBar
