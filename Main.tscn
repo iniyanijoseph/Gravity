@@ -16,4 +16,13 @@ margin_right = 1024.0
 margin_bottom = 600.0
 
 [node name="Platform" parent="." instance=ExtResource( 3 )]
-position = Vector2( 280, 424 )
+position = Vector2( 224, 584 )
+
+[node name="Platform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 608, 584 )
+
+[node name="Platform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 480, 584 )
+
+[node name="Platform4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 352, 584 )

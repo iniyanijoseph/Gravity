@@ -12,7 +12,9 @@ func _ready():
 func slam():
 	var localFloor = floorFindRayCast.get_collision_point()
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "position", localFloor - floorFindRayCast.position, 1).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN)
+	tween.tween_property(self, "position", localFloor - floorFindRayCast.position, 1).\
+	set_trans(Tween.TRANS_QUINT).\
+	set_ease(Tween.EASE_IN)
 	yield(tween, "finished")
 	action_complete()
 
