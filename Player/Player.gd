@@ -2,6 +2,9 @@ extends KinematicBody2D
 
 signal action_complete
 
+onready var floorFindRayCast : RayCast2D = $FloorFindRayCast
+onready var floorSlamTween : Tween = $FloorSlamTween
+
 func _ready():
 	# Set Up Signal Bus
 	var _a = connect("action_complete", PlayerActionSignalBus, "complete_action")
@@ -9,7 +12,11 @@ func _ready():
 	PlayerActionSignalBus.setup()
 
 func slam():
-	#Replace With Code to Slam
+	var localFloor = floorFindRayCast.get_collision_point()
+	print(localFloor)
+	print(position)
+	var _x = floorSlamTween.interpolate_property(self, "position:y", position.y, localFloor.y - floorFindRayCast.position.y, 1, Tween.TRANS_EXPO)
+	floorSlamTween.start()
 	action_complete()
 
 func gravitate():
