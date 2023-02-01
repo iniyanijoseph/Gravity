@@ -13,8 +13,6 @@ func _ready():
 
 func slam():
 	var localFloor = floorFindRayCast.get_collision_point()
-	print(localFloor)
-	print(position)
 	var _x = floorSlamTween.interpolate_property(self, "position:y", position.y, localFloor.y - floorFindRayCast.position.y, 1, Tween.TRANS_EXPO)
 	floorSlamTween.start()
 	action_complete()
