@@ -1,9 +1,7 @@
 extends KinematicBody2D
 
 signal action_complete
-
-onready var floorFindRayCast : RayCast2D = $FloorFindRayCast
-onready var floorSlamTween : Tween = $FloorSlamTween
+onready var floorFindRayCast : RayCast2D = $"%FloorFindRayCast"
 
 func _ready():
 	# Set Up Signal Bus
@@ -13,8 +11,9 @@ func _ready():
 
 func slam():
 	var localFloor = floorFindRayCast.get_collision_point()
-	var _x = floorSlamTween.interpolate_property(self, "position:y", position.y, localFloor.y - floorFindRayCast.position.y, 1, Tween.TRANS_EXPO)
-	floorSlamTween.start()
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "position", localFloor - floorFindRayCast.position, 1).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN)
+	yield(tween, "finished")
 	action_complete()
 
 func gravitate():
