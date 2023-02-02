@@ -2,7 +2,7 @@
 
 [ext_resource path="res://ActionController/ActionController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Platform/Floor/Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Platform/Platform.tscn" type="PackedScene" id=3]
 
 [node name="Main" type="Node2D"]
 
