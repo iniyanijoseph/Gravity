@@ -12,7 +12,7 @@ func _ready():
 func slam():
 	var localFloor = floorFindRayCast.get_collision_point()
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "position:y", localFloor.y - floorFindRayCast.position.y, 1).\
+	tween.tween_property(self, "position", localFloor - floorFindRayCast.position, 1).\
 	set_trans(Tween.TRANS_QUINT).\
 	set_ease(Tween.EASE_IN)
 	yield(tween, "finished")
@@ -29,6 +29,3 @@ func repel():
 # Call Whenever an action is complete to update player state
 func action_complete():
 	emit_signal("action_complete")
-
-func _physics_process(_delta):
-	var _q = move_and_slide(Vector2(200, 0), Vector2.UP)

@@ -21,8 +21,3 @@ unique_name_in_owner = true
 position = Vector2( 0, 32 )
 enabled = true
 cast_to = Vector2( 0, 600 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-limit_top = 0
-limit_bottom = 600
