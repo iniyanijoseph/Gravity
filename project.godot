@@ -22,6 +22,10 @@ PlayerActionSignalBus="*res://AutoLoads/PlayerActionSignalBus.gd"
 
 common/drop_mouse_on_gui_input_disabled=true
 
+[mono]
+
+project/assembly_name="Gravity"
+
 [physics]
 
 common/enable_pause_aware_picking=true
