@@ -25,7 +25,7 @@ func _input(event):
 	if event.is_action_released("ui_left_click"):
 		gravitateDestination = get_local_mouse_position()
 		print(gravitateDestination)
-		emit_signal("start_gravitation")
+		emit_signal("start_gravitation") 
 
 signal start_gravitation
 
