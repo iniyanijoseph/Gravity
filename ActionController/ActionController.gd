@@ -19,20 +19,19 @@ func _on_RechargeTimer_timeout():
 	pointsRemaining += 1
 	pointsBar.value = pointsRemaining
 
-
-func _on_SlamButton_toggled(button_pressed):
+func _on_SlamButton_pressed():
 	pointsRemaining -= $ActionTriggers/SlamButton.cost
 	pointsBar.value = pointsRemaining
 	PlayerActionSignalBus.slam()
 
 
-func _on_GravitateButton_toggled(button_pressed):
+func _on_GravitateButton_pressed():
 	pointsRemaining -= $ActionTriggers/GravitateButton.cost
 	pointsBar.value = pointsRemaining
 	PlayerActionSignalBus.gravitate()
 
 
-func _on_RepelButton_toggled(button_pressed):
+func _on_RepelButton_pressed():
 	pointsRemaining -= $ActionTriggers/RepelButton.cost
 	pointsBar.value = pointsRemaining
 	PlayerActionSignalBus.repel()
