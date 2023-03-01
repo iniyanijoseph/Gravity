@@ -12,9 +12,17 @@ enabled = true
 cast_to = Vector2( 0, 600 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 current = true
 limit_top = 0
 limit_bottom = 600
+offset_h = 1.0
+drag_margin_left = 0.5
+drag_margin_top = 0.5
+drag_margin_right = 0.5
+drag_margin_bottom = 0.5
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 polygon = PoolVector2Array( 0, -32, 16, -32, 16, 32, -16, 32, -16, -32 )
