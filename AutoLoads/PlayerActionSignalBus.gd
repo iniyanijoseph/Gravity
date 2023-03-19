@@ -1,6 +1,6 @@
 extends Node
 
-var player : KinematicBody2D
+var player : CharacterBody2D
 
 signal slam
 signal gravitate
@@ -10,19 +10,19 @@ var playerState = playerStates.INERT
 enum playerStates{SLAM, GRAVITATE, REPEL, INERT}
 
 func setup():
-	var _a = connect("slam", player, "slam")
-	var _b = connect("gravitate", player, "gravitate")
-	var _c = connect("repel", player, "repel")
+	var _a = connect("slam",Callable(player,"slam"))
+	var _b = connect("gravitate",Callable(player,"gravitate"))
+	var _c = connect("repel",Callable(player,"repel"))
 
-func slam():
+func slamCall():
 	playerState = playerStates.SLAM
 	emit_signal("slam")
 
-func gravitate():
+func gravitateCall():
 	playerState = playerStates.GRAVITATE
 	emit_signal("gravitate")
 
-func repel():
+func repelCall():
 	playerState = playerStates.REPEL
 	emit_signal("repel")
 

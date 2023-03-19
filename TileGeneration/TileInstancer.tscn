@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dg51ga5yr6qya"]
+
+[ext_resource type="Script" path="res://TileGeneration/TileInstancer.gd" id="1_yhn7t"]
+
+[node name="TileInstancer" type="Node2D" groups=["TileOrder"]]
+script = ExtResource("1_yhn7t")

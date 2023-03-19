@@ -1,0 +1,11 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://by0gecteucral"]
+
+[ext_resource type="PackedScene" uid="uid://chtgxf4v4y5sn" path="res://BackGround/Floor/Floor.tscn" id="1_bpepu"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_etcp2"]
+resource_name = "Basic"
+scenes/1/scene = ExtResource("1_bpepu")
+scenes/1/display_placeholder = ExtResource("1_bpepu")
+
+[resource]
+sources/0 = SubResource("TileSetScenesCollectionSource_etcp2")

@@ -1,0 +1,7 @@
+VisibleOnScreenEnabler2D
+Node2D
+TileMap
+Node
+VisibleOnScreenNotifier2D
+CharacterBody2D
+PhysicalBone2D

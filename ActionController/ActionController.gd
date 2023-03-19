@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-onready var actionTriggers : VBoxContainer = $ActionTriggers
-onready var pointsBar : ProgressBar = $HBoxContainer/ProgressBar
+@onready var actionTriggers : VBoxContainer = $ActionTriggers
+@onready var pointsBar : ProgressBar = $HBoxContainer/ProgressBar
 var pointsRemaining = 10
 
 func _process(_delta):
@@ -22,16 +22,16 @@ func _on_RechargeTimer_timeout():
 func _on_SlamButton_pressed():
 	pointsRemaining -= $ActionTriggers/SlamButton.cost
 	pointsBar.value = pointsRemaining
-	PlayerActionSignalBus.slam()
+	PlayerActionSignalBus.slamCall()
 
 
 func _on_GravitateButton_pressed():
 	pointsRemaining -= $ActionTriggers/GravitateButton.cost
 	pointsBar.value = pointsRemaining
-	PlayerActionSignalBus.gravitate()
+	PlayerActionSignalBus.gravitateCall()
 
 
 func _on_RepelButton_pressed():
 	pointsRemaining -= $ActionTriggers/RepelButton.cost
 	pointsBar.value = pointsRemaining
-	PlayerActionSignalBus.repel()
+	PlayerActionSignalBus.repelCall()

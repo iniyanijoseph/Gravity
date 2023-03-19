@@ -1,0 +1,10 @@
+res://default_env.tres
+res://TileGeneration/TileInstancer.tscn
+res://TileGeneration/TileSet.tres
+res://TileGeneration/TileConfigurationBasic.tscn
+res://BackGround/Floor/Floor.tscn
+res://TileGeneration/TileConfigurationBasic.gd
+res://Main.tscn
+res://Player/Player.tscn
+res://TileGeneration/TileInstancer.gd
+res://BackGround/Parallax.tscn

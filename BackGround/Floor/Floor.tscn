@@ -1,12 +1,20 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=3 uid="uid://chtgxf4v4y5sn"]
+
+[ext_resource type="Script" path="res://BackGround/Floor/Floor.gd" id="1_7gs18"]
 
 [node name="Floor" type="StaticBody2D"]
+script = ExtResource("1_7gs18")
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-rect = Rect2( -64, -8, 128, 16 )
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(0, 8)
+rect = Rect2(-64, -8, 128, 16)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 64, -8, 64, 8, -64, 8, -64, -8 )
+position = Vector2(0, 8)
+polygon = PackedVector2Array(64, -8, 64, 8, -64, 8, -64, -8)
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PoolVector2Array( -64, -8, -64, 8, 64, 8, 64, -8 )
+position = Vector2(0, 8)
+polygon = PackedVector2Array(-64, -8, -64, 8, 64, 8, 64, -8)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
