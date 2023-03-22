@@ -1,20 +1,23 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhkujbw5wle0u"]
 
-[sub_resource type="Gradient" id="1"]
-offsets = PackedFloat32Array(0.0108696, 0.472826, 1)
-colors = PackedColorArray(0.0044468, 0.00400976, 0.00400976, 1, 0.386871, 0.348849, 0.348849, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="2"]
-gradient = SubResource("1")
-width = 1024
-height = 600
-repeat = 1
+[ext_resource type="Texture2D" uid="uid://c2g11l1a3qhew" path="res://Art/Space.png" id="1_ksy07"]
+[ext_resource type="Texture2D" uid="uid://dwwhsdpemawkj" path="res://Art/Ship.png" id="2_dhqed"]
 
 [node name="Parallax" type="ParallaxBackground"]
 
 [node name="BG" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1024, 0)
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(3259, 0)
 
-[node name="Polygon2D" type="Polygon2D" parent="BG"]
-texture = SubResource("2")
-polygon = PackedVector2Array(0, 0, 0, 648, 1024, 648, 1024, 0)
+[node name="Sprite2D" type="Sprite2D" parent="BG"]
+position = Vector2(1623.21, 326.25)
+scale = Vector2(1.00539, 1.00539)
+texture = ExtResource("1_ksy07")
+
+[node name="Space" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(3259, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Space"]
+position = Vector2(1623.21, 326.25)
+scale = Vector2(1.00539, 1.00539)
+texture = ExtResource("2_dhqed")

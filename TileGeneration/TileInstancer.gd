@@ -9,6 +9,6 @@ var order := [tileMap.get("basicMap"), tileMap.get("basicMap"), tileMap.get("bas
 func next(pos):
 	if(index < order.size()):
 		var instance = order[index].instantiate()
-		instance.position = pos + Vector2(1024, 0)
+		instance.position = pos + Vector2(2294, 0)
 		add_child(instance)
 		index += 1

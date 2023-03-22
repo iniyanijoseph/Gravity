@@ -3,14 +3,16 @@
 [ext_resource type="TileSet" uid="uid://by0gecteucral" path="res://TileGeneration/TileSet.tres" id="1_o0haa"]
 [ext_resource type="Script" path="res://TileGeneration/TileConfigurationBasic.gd" id="2_1smbo"]
 
-[node name="TileMap" type="TileMap"]
+[node name="TileConfigurationBasic" type="TileMap"]
 tile_set = ExtResource("1_o0haa")
 format = 2
-layer_0/tile_data = PackedInt32Array(5242880, 0, 65536, 2555906, 0, 65536, 2555914, 0, 65536, 2555921, 0, 65536, 2555928, 0, 65536, 2555935, 0, 65536, 2555942, 0, 65536, 2555949, 0, 65536, 2555956, 0, 65536, 2555963, 0, 65536, 2555970, 0, 65536, 2555977, 0, 65536)
+layer_0/tile_data = PackedInt32Array(4718663, 0, 65536, 4718806, 0, 65536)
 script = ExtResource("2_1smbo")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
-rect = Rect2(0, 0, 1152, 640)
+rect = Rect2(0, 0, 2294, 640)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]
