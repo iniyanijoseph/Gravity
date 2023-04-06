@@ -6,6 +6,7 @@ res://TileGeneration/TileConfigurationBasic.tscn
 res://BackGround/Floor/Floor.tscn
 res://TileGeneration/TileInstancer.tscn
 res://BackGround/Parallax.tscn
-res://TileGeneration/TileConfigurationBasic.gd
-res://TileGeneration/TileInstancer.gd
-res://BackGround/Floor/Floor.gd
+res://BackGround/BasicObstacle.tscn
+res://BackGround/DamageObstacle.tscn
+res://BackGround/DamageObstacle.gd
+res://Player/Player.gd

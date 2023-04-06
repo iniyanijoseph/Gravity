@@ -54,4 +54,7 @@ func _physics_process(delta):
 	else:
 		camera.offset.x += speed*delta
 
+func hurt():
+	print("OW")
+
 

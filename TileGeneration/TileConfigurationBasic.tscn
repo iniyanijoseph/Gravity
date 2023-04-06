@@ -6,7 +6,7 @@
 [node name="TileConfigurationBasic" type="TileMap"]
 tile_set = ExtResource("1_o0haa")
 format = 2
-layer_0/tile_data = PackedInt32Array(4718663, 0, 65536, 4718806, 0, 65536)
+layer_0/tile_data = PackedInt32Array(4718663, 0, 65536, 4718806, 0, 65536, 2752561, 0, 131072, 1245278, 0, 131072, 3407977, 0, 131072, 1966223, 0, 131072, 2687172, 0, 131072, 852138, 0, 131072, 3604699, 0, 131072, 1573116, 0, 131072, 3604747, 0, 131072, 2097424, 0, 131072, 2162960, 0, 131072, 2228496, 0, 131072, 2294032, 0, 131072, 2359568, 0, 131072, 2425104, 0, 131072, 3145810, 0, 196608, 4128889, 0, 196608)
 script = ExtResource("2_1smbo")
 
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
