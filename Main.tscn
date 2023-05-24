@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxybjn00fq6bt"]
+[gd_scene load_steps=7 format=3 uid="uid://dxybjn00fq6bt"]
 
 [ext_resource type="PackedScene" path="res://ActionController/ActionController.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://dg51ga5yr6qya" path="res://TileGeneration/TileInstancer.tscn" id="1_4mc3j"]
@@ -6,11 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://b8b1a6dyu7j4l" path="res://Player/Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://dhkujbw5wle0u" path="res://BackGround/Parallax.tscn" id="4"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_skmab"]
+
 [node name="Main" type="Node2D"]
 
 [node name="TileInstancer" parent="." instance=ExtResource("1_4mc3j")]
 
 [node name="TileConfigurationBasic" parent="TileInstancer" instance=ExtResource("1_a7xaf")]
+layer_0/name = "Obstacles"
 layer_1/name = "MovingEnemy"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -25,3 +28,13 @@ position = Vector2(282, 482)
 [node name="ActionController" parent="." instance=ExtResource("1")]
 
 [node name="Parallax" parent="." instance=ExtResource("4")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-8, 576)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_skmab")
+one_way_collision = true
+
+[connection signal="body_entered" from="TileInstancer/TileConfigurationBasic/@DamageObstacle@38920" to="TileInstancer/TileConfigurationBasic/@DamageObstacle@38920" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="TileInstancer/TileConfigurationBasic/@DamageObstacle@38921" to="TileInstancer/TileConfigurationBasic/@DamageObstacle@38921" method="_on_body_entered" flags=18]
