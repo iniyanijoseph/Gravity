@@ -4,7 +4,8 @@ signal action_complete
 @onready var floorFindRayCast : RayCast2D = $"%FloorFindRayCast"
 @onready var camera : Camera2D = $"%Camera2D"
 
-@export var speed: int = 500
+@export var speed: int = 0
+@export var health: int = 100
 @onready var cameraDefaultOffset = camera.offset.x
 
 func _ready():
@@ -56,5 +57,10 @@ func _physics_process(delta):
 
 func hurt():
 	print("OW")
+
+func takeDamage(damage : int):
+	hurt()
+	print("I took " + str(damage) + " damage")
+	health -= damage;
 
 

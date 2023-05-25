@@ -1,26 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxybjn00fq6bt"]
+[gd_scene load_steps=6 format=3 uid="uid://f47itmoyvhtx"]
 
 [ext_resource type="PackedScene" path="res://ActionController/ActionController.tscn" id="1"]
-[ext_resource type="PackedScene" uid="uid://dg51ga5yr6qya" path="res://TileGeneration/TileInstancer.tscn" id="1_4mc3j"]
-[ext_resource type="PackedScene" uid="uid://dvn2hnha4ume" path="res://TileGeneration/TileConfigurationBasic.tscn" id="1_a7xaf"]
-[ext_resource type="PackedScene" uid="uid://b8b1a6dyu7j4l" path="res://Player/Player.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://dhkujbw5wle0u" path="res://BackGround/Parallax.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://d12hhpstohqqg" path="res://Player/Player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://BackGround/Parallax.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dcou01d6i2lmh" path="res://Boss.tscn" id="4_5u7vg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_skmab"]
 
 [node name="Main" type="Node2D"]
-
-[node name="TileInstancer" parent="." instance=ExtResource("1_4mc3j")]
-
-[node name="TileConfigurationBasic" parent="TileInstancer" instance=ExtResource("1_a7xaf")]
-layer_0/name = "Obstacles"
-layer_1/name = "MovingEnemy"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("2")]
 position = Vector2(282, 482)
@@ -36,5 +23,5 @@ position = Vector2(-8, 576)
 shape = SubResource("WorldBoundaryShape2D_skmab")
 one_way_collision = true
 
-[connection signal="body_entered" from="TileInstancer/TileConfigurationBasic/@DamageObstacle@38920" to="TileInstancer/TileConfigurationBasic/@DamageObstacle@38920" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="TileInstancer/TileConfigurationBasic/@DamageObstacle@38921" to="TileInstancer/TileConfigurationBasic/@DamageObstacle@38921" method="_on_body_entered" flags=18]
+[node name="Area2D" parent="." instance=ExtResource("4_5u7vg")]
+position = Vector2(160, 120)

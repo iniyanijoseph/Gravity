@@ -1,10 +1,7 @@
-res://default_env.tres
 res://Main.tscn
+res://default_env.tres
 res://TileGeneration/TileSet.tres
+res://Player/Player.gd
+res://Boss.gd
+res://Boss.tscn
 res://Player/Player.tscn
-res://TileGeneration/TileConfigurationBasic.tscn
-res://BackGround/Floor/Floor.tscn
-res://TileGeneration/TileInstancer.tscn
-res://BackGround/BasicObstacle.tscn
-res://BackGround/DamageObstacle.tscn
-res://BackGround/Parallax.tscn
