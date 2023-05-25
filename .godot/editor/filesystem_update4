@@ -17,3 +17,12 @@ res://TileGeneration/TileInstancer.gd
 res://BackGround/MovingDamageObstacle.tscn
 res://TileGeneration/TileConfiguration3.tscn
 res://TileGeneration/TileConfiguration4.tscn
+res://Save/Checkpoint.tscn
+res://Save/SaveAutoLoad.gd
+res://Player/Player.gd
+res://Save/Checkpoint.gd
+res://GlobalTheme.tres
+res://ActionController/ActionController.tscn
+res://Resources/SaveData.tres
+res://Resources/GameSaveData.gd
+res://TileGeneration/TileConfigurationBasic.gd

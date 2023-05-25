@@ -1,6 +1,7 @@
 extends Area2D
 
-func _on_Checkpoint_body_entered(body):
+func _on_body_entered(body):
 	if body.is_in_group("Player"):
-		SaveAutoLoad.saveFile(-1)
+		SaveAutoLoad.saveFile(body.checkPoint)
+		body.checkPoint += 1
 		print("saved")

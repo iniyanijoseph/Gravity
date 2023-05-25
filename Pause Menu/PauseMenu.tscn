@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfu8yij88cuys"]
+[gd_scene load_steps=7 format=3 uid="uid://bfu8yij88cuys"]
 
 [ext_resource type="Script" path="res://Pause Menu/PauseMenu.gd" id="1_vfrfr"]
+[ext_resource type="Theme" uid="uid://d4bj4jclkfjos" path="res://GlobalTheme.tres" id="2_5i803"]
 [ext_resource type="Texture2D" uid="uid://dp7heumjxbxnu" path="res://Pause Menu/pauseIcon.png" id="2_cujkr"]
 
 [sub_resource type="Animation" id="Animation_yo01p"]
@@ -167,6 +168,7 @@ offset_left = -40.0
 offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("2_5i803")
 icon = ExtResource("2_cujkr")
 flat = true
 
@@ -177,6 +179,7 @@ anchor_left = 0.25
 anchor_right = 0.74
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_5i803")
 
 [node name="AudioSlider" type="HSlider" parent="Menu"]
 layout_mode = 2

@@ -8,6 +8,7 @@ size = Vector2(16, 80)
 [sub_resource type="Animation" id="Animation_xokst"]
 resource_name = "Loop"
 length = 2.0
+loop_mode = 1
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true

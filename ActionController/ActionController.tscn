@@ -1,54 +1,53 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://myatinsjjm7m"]
 
-[ext_resource path="res://icon.png" type="Texture2D" id=1]
-[ext_resource path="res://ActionController/ActionController.gd" type="Script" id=3]
-[ext_resource path="res://ActionController/ActionButton/ActionButton.tscn" type="PackedScene" id=4]
+[ext_resource type="Texture2D" uid="uid://bk7wm75u67yn7" path="res://icon.png" id="1"]
+[ext_resource type="Theme" uid="uid://d4bj4jclkfjos" path="res://GlobalTheme.tres" id="2_jmbji"]
+[ext_resource type="Script" path="res://ActionController/ActionController.gd" id="3"]
+[ext_resource type="PackedScene" path="res://ActionController/ActionButton/ActionButton.tscn" id="4"]
 
 [node name="ActionController" type="CanvasLayer"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="ActionTriggers" type="VBoxContainer" parent="."]
+anchors_preset = -1
 anchor_right = 0.15
 anchor_bottom = 1.0
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("2_jmbji")
 
-[node name="SlamButton" parent="ActionTriggers" instance=ExtResource( 4 )]
+[node name="SlamButton" parent="ActionTriggers" instance=ExtResource("4")]
+layout_mode = 2
 
-[node name="GravitateButton" parent="ActionTriggers" instance=ExtResource( 4 )]
-offset_top = 201.0
-offset_bottom = 398.0
+[node name="GravitateButton" parent="ActionTriggers" instance=ExtResource("4")]
+layout_mode = 2
 cost = 5
 
-[node name="RepelButton" parent="ActionTriggers" instance=ExtResource( 4 )]
-offset_top = 402.0
-offset_bottom = 600.0
+[node name="RepelButton" parent="ActionTriggers" instance=ExtResource("4")]
+layout_mode = 2
 cost = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -307.2
 offset_bottom = 64.0
 size_flags_horizontal = 3
+theme = ExtResource("2_jmbji")
 
 [node name="ProgressBar" type="ProgressBar" parent="HBoxContainer"]
-offset_right = 239.0
-offset_bottom = 16.0
-grow_vertical = 2
-custom_minimum_size = Vector2( 0, 16 )
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
 size_flags_horizontal = 3
 max_value = 10.0
 step = 1.0
 rounded = true
-percent_visible = false
 
 [node name="Icon" type="TextureRect" parent="HBoxContainer"]
-offset_left = 243.0
-offset_right = 307.0
-offset_bottom = 64.0
-texture = ExtResource( 1 )
+layout_mode = 2
+texture = ExtResource("1")
 stretch_mode = 5
 
 [node name="RechargeTimer" type="Timer" parent="."]

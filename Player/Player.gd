@@ -7,6 +7,8 @@ signal action_complete
 @export var speed: int = 500
 @onready var cameraDefaultOffset = camera.offset.x
 
+var checkPoint : int = 0
+
 func _ready():
 	# Set Up Signal Bus
 	var _a = connect("action_complete",Callable(PlayerActionSignalBus,"complete_action"))
