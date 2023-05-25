@@ -7,10 +7,11 @@ enum State {
 
 var current : State = State.idle;
 var startingPos : Vector2;
-const minimumSpeed : int = 100
-const maxPosition : int = 1000;
+const minimumSpeed : int = 50
+const maxPosition : int = 500;
 var numTime : float = 0;
 const time : float = .2;
+var pastTargetX : int = 0;
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,12 +33,16 @@ func _process(delta):
 			# Tries to generate a speed value that has a minimumBound (so the boss doesn't idle out)
 			# and a maximum position deviation (so the boss doesn't go off the screen) 
 			var speed : int = 0;
-			while (speed == 0 or position.x + speed > startingPos.x + (maxPosition / 2)
-			or position.x + speed < startingPos.x - (maxPosition / 2)):
+			var targetX: int = 0;
+			var minX: int = startingPos.x - (maxPosition / 2);
+			var maxX: int = startingPos.x + (maxPosition / 2);
+			while (speed == 0 or targetX > maxX or targetX < minX or abs(pastTargetX - targetX) < minimumSpeed):
 				speed = randi_range(-maxPosition + minimumSpeed, maxPosition - minimumSpeed);
 				speed += (compareTo(speed, 0) * minimumSpeed);
-			print(speed)
-			tween.tween_property($Sprite, "position", Vector2(position.x + speed, position.y), time)
+				targetX = position.x + speed;
+			# print(speed);
+			pastTargetX = targetX;
+			tween.tween_property($Sprite, "position", Vector2(targetX, position.y), time);
 		State.slam:
 			# Slam behavior code
 			# Perform slam action, e.g., play a slam animation and deal damage to the player
