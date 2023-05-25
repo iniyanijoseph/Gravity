@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://potei8negfx6"]
+
+[ext_resource type="Script" path="res://BackGround/DamageObstacle.gd" id="1_rbcr5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eoh24"]
+size = Vector2(16, 80)
+
+[sub_resource type="Animation" id="Animation_xokst"]
+resource_name = "Loop"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(128, -0.25, 0, 0.25, 0, 1.5, -0.77, 21, 0.83, -24, -128, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.97, 2)
+}
+
+[sub_resource type="Animation" id="Animation_cjiov"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(128, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ygxwr"]
+_data = {
+"Loop": SubResource("Animation_xokst"),
+"RESET": SubResource("Animation_cjiov")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DamageObstacle" type="Area2D" parent="."]
+position = Vector2(0, 128)
+script = ExtResource("1_rbcr5")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageObstacle"]
+shape = SubResource("RectangleShape2D_eoh24")
+
+[node name="Polygon2D" type="Polygon2D" parent="DamageObstacle"]
+color = Color(0.86, 0.172, 0.172, 1)
+polygon = PackedVector2Array(-8, -40, 8, -40, 8, 40, -8, 40)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../DamageObstacle")
+autoplay = "Loop"
+libraries = {
+"": SubResource("AnimationLibrary_ygxwr")
+}
+
+[connection signal="body_entered" from="DamageObstacle" to="DamageObstacle" method="_on_body_entered"]

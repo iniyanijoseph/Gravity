@@ -1,3 +1,11 @@
+Node2D
+AnimationPlayer
+Button
+HSlider
+VBoxContainer
+Control
+AnimationTree
+CanvasLayer
 CollisionShape2D
 StaticBody2D
 Polygon2D
@@ -5,7 +13,6 @@ Area2D
 Sprite2D
 ParallaxLayer
 VisibleOnScreenEnabler2D
-Node2D
 TileMap
 Node
 VisibleOnScreenNotifier2D

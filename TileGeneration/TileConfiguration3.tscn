@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0tk5wcttccdn"]
+
+[ext_resource type="TileSet" uid="uid://by0gecteucral" path="res://TileGeneration/TileSet.tres" id="1_t6kcu"]
+[ext_resource type="Script" path="res://TileGeneration/TileConfigurationBasic.gd" id="2_e2c7f"]
+
+[node name="TileConfigurationBasic" type="TileMap"]
+tile_set = ExtResource("1_t6kcu")
+format = 2
+layer_0/tile_data = PackedInt32Array(3342373, 0, 131072, 852216, 0, 131072, 852228, 0, 131072, 4391000, 0, 131072, 2883838, 0, 196608, 4063435, 0, 131072, 1704215, 0, 131072, 1704203, 0, 131072, 1900630, 0, 65536, 3473541, 0, 65536, 2293868, 0, 131072, 2293880, 0, 131072, 1572893, 0, 131072, 1572905, 0, 131072, 1573039, 0, 131072, 1573051, 0, 131072, 4260089, 0, 131072, 4260101, 0, 131072, 1048726, 0, 65536)
+script = ExtResource("2_e2c7f")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+rect = Rect2(0, 0, 2294, 640)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

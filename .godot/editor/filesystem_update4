@@ -3,8 +3,17 @@ res://Main.tscn
 res://TileGeneration/TileSet.tres
 res://Player/Player.tscn
 res://TileGeneration/TileConfigurationBasic.tscn
-res://BackGround/Floor/Floor.tscn
 res://TileGeneration/TileInstancer.tscn
 res://BackGround/BasicObstacle.tscn
 res://BackGround/DamageObstacle.tscn
 res://BackGround/Parallax.tscn
+res://Pause Menu/PauseMenu.gd
+res://Pause Menu/PauseMenu.tscn
+res://default_bus_layout.tres
+res://TileGeneration/tile_configuration1.tscn
+res://TileGeneration/TileConfiguration1.tscn
+res://TileGeneration/TileConfiguration2.tscn
+res://TileGeneration/TileInstancer.gd
+res://BackGround/MovingDamageObstacle.tscn
+res://TileGeneration/TileConfiguration3.tscn
+res://TileGeneration/TileConfiguration4.tscn
