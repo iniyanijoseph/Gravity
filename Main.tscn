@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxybjn00fq6bt"]
+[gd_scene load_steps=7 format=3 uid="uid://dxybjn00fq6bt"]
 
 [ext_resource type="PackedScene" uid="uid://myatinsjjm7m" path="res://ActionController/ActionController.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://dg51ga5yr6qya" path="res://TileGeneration/TileInstancer.tscn" id="1_4mc3j"]
-[ext_resource type="PackedScene" uid="uid://dvn2hnha4ume" path="res://TileGeneration/TileConfiguration1.tscn" id="1_a7xaf"]
 [ext_resource type="PackedScene" uid="uid://b8b1a6dyu7j4l" path="res://Player/Player.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://dhkujbw5wle0u" path="res://BackGround/Parallax.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://bfu8yij88cuys" path="res://Pause Menu/PauseMenu.tscn" id="6_caljd"]
@@ -28,13 +27,3 @@ one_way_collision = true
 [node name="PauseMenu" parent="." instance=ExtResource("6_caljd")]
 
 [node name="TileInstancer" parent="." instance=ExtResource("1_4mc3j")]
-
-[node name="TileConfigurationBasic" parent="TileInstancer" instance=ExtResource("1_a7xaf")]
-layer_0/name = "Obstacles"
-layer_1/name = "MovingEnemy"
-layer_1/enabled = true
-layer_1/modulate = Color(1, 1, 1, 1)
-layer_1/y_sort_enabled = false
-layer_1/y_sort_origin = 0
-layer_1/z_index = 0
-layer_1/tile_data = PackedInt32Array()

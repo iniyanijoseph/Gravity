@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqp47vye7b16m"]
+
+[ext_resource type="Texture2D" uid="uid://dqwubk84ya8ev" path="res://Pause Menu/dialogueIcon.png" id="1_d1los"]
+[ext_resource type="Script" path="res://Pause Menu/dialogue.gd" id="1_qqdub"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_qqdub")
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -976.0
+offset_top = -160.0
+offset_right = -24.0
+offset_bottom = -31.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_d1los")
+region_rect = Rect2(3, 64, 512, 129)
+patch_margin_left = 28
+patch_margin_right = 160
+patch_margin_bottom = 129
+
+[node name="Text" type="Label" parent="NinePatchRect2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.037
+anchor_top = 0.124
+anchor_right = 0.857
+anchor_bottom = 0.8
+offset_left = -0.223999
+offset_top = 1.004
+offset_right = 0.135925
+offset_bottom = 1.8
+grow_horizontal = 2
+grow_vertical = 2

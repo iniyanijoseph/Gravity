@@ -9,8 +9,11 @@ func _ready():
 	var data = SaveAutoLoad.loadFile() 
 	index = data.checkpoint
 	PlayerActionSignalBus.player.checkPoint = index
-	
-	
+	var instance = order[index].instantiate()
+	instance.position = Vector2(2294, 0)
+	add_child(instance)
+	index += 1
+
 func next(pos):
 	if(index < order.size()):
 		var instance = order[index].instantiate()

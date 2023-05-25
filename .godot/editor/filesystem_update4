@@ -1,28 +1,8 @@
 res://default_env.tres
-res://Main.tscn
-res://TileGeneration/TileSet.tres
-res://Player/Player.tscn
-res://TileGeneration/TileConfigurationBasic.tscn
-res://TileGeneration/TileInstancer.tscn
-res://BackGround/BasicObstacle.tscn
-res://BackGround/DamageObstacle.tscn
-res://BackGround/Parallax.tscn
-res://Pause Menu/PauseMenu.gd
-res://Pause Menu/PauseMenu.tscn
-res://default_bus_layout.tres
-res://TileGeneration/tile_configuration1.tscn
-res://TileGeneration/TileConfiguration1.tscn
-res://TileGeneration/TileConfiguration2.tscn
-res://TileGeneration/TileInstancer.gd
-res://BackGround/MovingDamageObstacle.tscn
-res://TileGeneration/TileConfiguration3.tscn
-res://TileGeneration/TileConfiguration4.tscn
-res://Save/Checkpoint.tscn
-res://Save/SaveAutoLoad.gd
-res://Player/Player.gd
-res://Save/Checkpoint.gd
+res://Pause Menu/dialogue.tscn
 res://GlobalTheme.tres
-res://ActionController/ActionController.tscn
-res://Resources/SaveData.tres
-res://Resources/GameSaveData.gd
-res://TileGeneration/TileConfigurationBasic.gd
+res://TileGeneration/TileSet.tres
+res://Pause Menu/dialogue.gd
+res://Main.tscn
+res://Player/Player.tscn
+res://TileGeneration/TileInstancer.tscn
