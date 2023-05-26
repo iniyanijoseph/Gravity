@@ -61,9 +61,9 @@ func _process(delta):
 			# Slam behavior code
 			# Perform slam action, e.g., play a slam animation and deal damage to the player
 			var player = get_tree().get_nodes_in_group("Player");
-			tween.tween_property($Sprite, "position", Vector2(player[0].x, 0), time);
+			tween.tween_property($Sprite, "position", Vector2(player[0].position.x, 300), time);
 			tween.play();
-			tween.tween_property($Sprite, "position", Vector2(player[0].x, startingPos.y), time);
+			tween.tween_property($Sprite, "position", Vector2(player[0].position.x, startingPos.y - 3000), time);
 			tween.play();
 		State.laser:
 			# Laser behavior code
@@ -114,6 +114,8 @@ func startNewPhase():
 func draw_laser():
 	var canvas_item = $CanvasItem
 	canvas_item.draw_line(laserStartPos, laserEndPos, Color(1, 0, 0), 2)
+	canvas_item.move_to_front();
+	canvas_item.show();
 
 
 func deal_damage_to_player():
