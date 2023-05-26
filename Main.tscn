@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" path="res://ActionController/ActionController.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://d12hhpstohqqg" path="res://Player/Player.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://BackGround/Parallax.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://dhkujbw5wle0u" path="res://BackGround/Parallax.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dcou01d6i2lmh" path="res://Boss.tscn" id="4_5u7vg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_skmab"]

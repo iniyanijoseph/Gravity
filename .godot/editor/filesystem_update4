@@ -1,7 +1,5 @@
-res://Main.tscn
 res://default_env.tres
+res://Main.tscn
 res://TileGeneration/TileSet.tres
-res://Player/Player.gd
-res://Boss.gd
 res://Boss.tscn
-res://Player/Player.tscn
+res://Boss.gd
